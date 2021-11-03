@@ -32,6 +32,9 @@ function changeStyle() {
   } else if ($(this).hasClass('complete')) {
     $(this).removeClass('complete');
     $(this).addClass('cool');
+  } else {
+    $(this).removeClass('hot');
+    $(this).addClass('complete');
   }
 }
 
