@@ -9,8 +9,12 @@ $('.hot').each(function () {
 });
 
 // traverse the elements
+//$('#one').next().next().text('EG');
 
 // add a new element by clicking the plus sign
+//$('#todo').append('<li>candi</li>');
+//$('#todo').prepend('<li>funni saus</li>');
+$('#add').click(addElement);
 
 // before and after are for siblings
 // append and prepend are for parent
@@ -19,6 +23,7 @@ function addElement() {
   // add a new element
   // add a input text box
   // whenever the user are done add the element
+  $('#todo').append('<li>newItem</li>');
 }
 
 // bind click with the event handler
@@ -33,7 +38,6 @@ function changeStyle() {
     $(this).removeClass('complete');
     $(this).addClass('cool');
   } else {
-    $(this).removeClass('hot');
     $(this).addClass('complete');
   }
 }
