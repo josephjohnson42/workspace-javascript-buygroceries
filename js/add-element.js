@@ -3,6 +3,10 @@
  */
 
 // get all the hot class elements- change them to cool class
+$('.hot').each(function () {
+  $(this).removeClass('hot');
+  $(this).addClass('cool');
+});
 
 // traverse the elements
 
@@ -14,16 +18,22 @@
 function addElement() {
   // add a new element
   // add a input text box
-  
   // whenever the user are done add the element
-  
 }
 
 // bind click with the event handler
-
+$('li').click(changeStyle);
 //  click the li element will change the changeStyle
 //  three style : complete, cool, hot
-function changeStyle() {}
+function changeStyle() {
+  if ($(this).hasClass('cool')) {
+    $(this).removeClass('cool');
+    $(this).addClass('complete');
+  } else if ($(this).hasClass('complete')) {
+    $(this).removeClass('complete');
+    $(this).addClass('cool');
+  }
+}
 
 // delete complete element by clicking the trash can
 document.getElementById('remove').addEventListener('click', removeElement);
