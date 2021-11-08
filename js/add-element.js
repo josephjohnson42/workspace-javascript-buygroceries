@@ -22,8 +22,19 @@ $('#add').click(addElement);
 function addElement() {
   // add a new element
   // add a input text box
+  $('#todo').append('<li><input type="text"></li>');
+
   // whenever the user are done add the element
-  $('#todo').append('<li>newItem</li>');
+  $('input').blur(function () {
+    $(this).parent().addClass('cool');
+    var items = $(this).val();
+
+    //replace input box with text
+    $(this).parent().text(items);
+
+    //make changeStyle work w new element
+    $('li').click(changeStyle);
+  });
 }
 
 // bind click with the event handler
@@ -47,4 +58,5 @@ document.getElementById('remove').addEventListener('click', removeElement);
 
 function removeElement() {
   // remove the marked elements  -- element with style complete
+  $('.complete').remove();
 }
