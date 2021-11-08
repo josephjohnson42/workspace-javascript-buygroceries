@@ -40,6 +40,7 @@ $('#save').click(function () {
 
     firebase.firestore().collection('groceryList').add({
       item: value, //?
+      name: "gary"
     });
   });
 });
