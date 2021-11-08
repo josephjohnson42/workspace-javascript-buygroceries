@@ -38,7 +38,7 @@ $('#save').click(function () {
     var value = $(this).text();
     console.log(value);
 
-    firebase.firestore().collection('mylist').add({
+    firebase.firestore().collection('groceryList').add({
       item: value, //?
     });
   });
